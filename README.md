@@ -5,7 +5,7 @@
 [build]: https://github.com/akunzai/react-showcase/actions/workflows/build.yml
 [build-badge]: https://github.com/akunzai/react-showcase/actions/workflows/build.yml/badge.svg
 [codecov]: https://codecov.io/gh/akunzai/react-showcase
-[codecov-badge]: https://codecov.io/gh/akunzai/react-showcase/branch/main/graph/badge.svg?token=gEZ8y4Ta6p
+[codecov-badge]: https://codecov.io/gh/akunzai/react-showcase/graph/badge.svg?token=gEZ8y4Ta6p
 
 Modern React showcase app featuring authentication, task management, i18n, mock API, and automated GitHub Pages deployment. Built with [React](https://reactjs.org/), CSS + Bootstrap, Vite, and Bun.
 

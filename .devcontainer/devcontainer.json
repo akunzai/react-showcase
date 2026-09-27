@@ -18,15 +18,5 @@
   },
   "otherPortsAttributes": {
     "onAutoForward": "ignore"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "mhutchie.git-graph",
-        "pflannery.vscode-versionlens",
-        "streetsidesoftware.code-spell-checker"
-      ]
-    }
   }
 }

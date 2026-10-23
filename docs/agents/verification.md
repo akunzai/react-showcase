@@ -20,7 +20,7 @@ It never prompts. A step needing a human aborts non-zero naming the
 prerequisite — see Human prerequisites below. If starting the dev server (`bun start`), pass `-- --no-open` in headless or agent environments to prevent launching a local browser window.
 
 **Proof it ran**: all three commands exit zero. `bun run build` runs
-`tsc && vite build`, producing artifacts in `dist/`. `bun run
+`bun run check && vite build`, producing artifacts in `dist/`. `bun run
 test:coverage` prints a coverage table to stdout.
 
 ## Checks
@@ -29,17 +29,21 @@ test:coverage` prints a coverage table to stdout.
 | --------------------------- | ---------------------------- |
 | TypeScript + Vite build     | `bun run build`              |
 | Oxlint                      | `bun run lint`               |
-| Oxfmt check                 | `bun run format:check`       |
+| Bun format check            | `bun run fmt:check`          |
 | Vitest with coverage        | `bun run test:coverage`      |
 | Playwright E2E tests        | `bun run test:e2e`           |
 | Single test file            | `bun run test ComponentName` |
 | Dev server (headless/agent) | `bun run start -- --no-open` |
 
+The build uses Bun's built-in TypeScript 7 type checker. Run
+`bun run check` to check types without building. It does not require the
+`typescript` package; `i18next-parser` still brings its own TypeScript dependency.
+
 ## Human prerequisites
 
 Run once, by a person. The start command fails until they are done.
 
-- [ ] Install [Bun](https://bun.sh/) 1.4.2 or later (or run `mise install`)
+- [ ] Install [Bun](https://bun.sh/) 1.4.4 or later (or run `mise install`)
 - [ ] Run `bun install`
 
 ## Capturing evidence

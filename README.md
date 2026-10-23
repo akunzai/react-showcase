@@ -11,7 +11,7 @@ Modern React showcase app featuring authentication, task management, i18n, mock 
 
 ## Requirement
 
-- [Bun](https://bun.sh/)
+- [Bun](https://bun.sh/) 1.4.4 or later
 
 ## [Getting Started](https://create-react-app.dev/docs/getting-started)
 

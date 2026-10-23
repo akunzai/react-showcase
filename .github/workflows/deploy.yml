@@ -48,7 +48,7 @@ jobs:
           GITHUB_PAGES: 'true'
           VITE_ENABLE_MOCK: 'true'
         run: |
-          mise run build
+          bun run build
           cp dist/index.html dist/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

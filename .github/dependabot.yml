@@ -18,10 +18,6 @@ updates:
       interval: weekly
     cooldown:
       default-days: 3
-    ignore:
-      - dependency-name: 'typescript'
-        update-types:
-          - version-update:semver-major
     groups:
       react:
         patterns:
@@ -43,7 +39,6 @@ updates:
       oxc:
         patterns:
           - 'oxlint'
-          - 'oxfmt'
           - '@oxc*'
       vite:
         patterns:

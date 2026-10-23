@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "start": "vite --host",
-    "build": "tsc && vite build",
+    "build": "bun run check && vite build",
     "serve": "vite preview",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
+    "check": "bun check",
     "lint": "oxlint",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
+    "fmt": "bun fmt",
+    "fmt:check": "bun fmt --check",
     "i18n:extract": "i18next",
     "msw": "msw init public --save"
   },
@@ -41,9 +42,7 @@
     "i18next-parser": "^9.4.0",
     "jsdom": "^30.1.0",
     "msw": "^2.15.0",
-    "oxfmt": "^0.68.0",
     "oxlint": "^1.83.0",
-    "typescript": "~6.0.3",
     "vite": "^8.3.0",
     "vitest": "^5.0.1"
   },

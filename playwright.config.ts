@@ -21,7 +21,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: process.env.CI ? 'bun run build && bun run serve' : 'bun run start -- --no-open',
+    command: 'bun run start -- --no-open',
     url: 'http://localhost:5173',
     reuseExistingServer: !process.env.CI,
   },

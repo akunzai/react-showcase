@@ -79,10 +79,10 @@ jobs:
           key: ${{ runner.os }}-playwright-${{ hashFiles('**/bun.lock') }}
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: bunx playwright install --with-deps chromium firefox
+        run: bunx --bun playwright install --with-deps chromium
       - name: Install Playwright system dependencies
         if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: bunx playwright install-deps chromium firefox
+        run: bunx --bun playwright install-deps chromium
       - name: Run E2E tests
         run: bun run test:e2e
       - if: ${{ !cancelled() }}
